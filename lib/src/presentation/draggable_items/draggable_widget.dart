@@ -92,12 +92,29 @@ class DraggableWidget extends StatelessWidget {
         break;
 
       /// image [file_image_gb.dart]
+        
       case ItemType.image:
+        // if (_controlProvider.mediaPath.isNotEmpty) {
+        //   overlayWidget = SizedBox(
+        //     width: _size.width - 72,
+        //     child: FileImageBG(
+        //       filePath: File(_controlProvider.mediaPath),
+        //       generatedGradient: (color1, color2) {
+        //         _colorProvider.color1 = color1;
+        //         _colorProvider.color2 = color2;
+        //       },
+        //     ),
+        //   );
+        // } else {
+        //   overlayWidget = Container();
+        // }
+
         if (_controlProvider.mediaPath.isNotEmpty) {
           overlayWidget = SizedBox(
             width: _size.width - 72,
             child: FileImageBG(
-              filePath: File(_controlProvider.mediaPath),
+              //RAFAEL
+              filePath: File(_controlProvider.mediaPath[0].path.toString()),
               generatedGradient: (color1, color2) {
                 _colorProvider.color1 = color1;
                 _colorProvider.color2 = color2;
@@ -107,7 +124,6 @@ class DraggableWidget extends StatelessWidget {
         } else {
           overlayWidget = Container();
         }
-
         break;
 
       case ItemType.gif:
