@@ -100,10 +100,10 @@ class ControlNotifier extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// get image path
-  String _mediaPath = '';
-  String get mediaPath => _mediaPath;
-  set mediaPath(String media) {
+  /// get image path 
+  List _mediaPath = [];
+  List get mediaPath => _mediaPath;
+  set mediaPath(List media) {
     _mediaPath = media;
     notifyListeners();
   }
