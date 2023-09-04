@@ -114,7 +114,7 @@ class DraggableWidget extends StatelessWidget {
             width: _size.width - 72,
             child: FileImageBG(
               //RAFAEL
-              filePath: File(_controlProvider.mediaPath[0].path.toString()),
+              filePath: File(_controlProvider.mediaPath),
               generatedGradient: (color1, color2) {
                 _colorProvider.color1 = color1;
                 _colorProvider.color2 = color2;
